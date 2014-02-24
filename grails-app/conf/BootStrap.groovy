@@ -33,6 +33,19 @@ class BootStrap {
                 startDate: new Date('11/2/2013'),
                 endDate: new Date('11/2/2013'),
                 description: 'Join the Perl programmers of the ...').save()
+def g1 = TekEvent.findByName('Gateway Code Camp')
+
+      g1.addToVolunteers(new TekUser(fullName: 'Bill Smith', userName: 'Mr_Bill',
+            password: '12345',
+            email: 'mrbill@email.com',
+            website: 'www.mrbillswebsite.com',
+            bio: 'Software developer, claymation artist.'))
+
+      g1.addToRespondents('ben@grailsmail.com') 
+      g1.addToRespondents('zachary@linuxgurus.org') 
+      g1.addToRespondents('solomon@bootstrapwelding.com') 
+
+      g1.save()
 
     }
     def destroy = {

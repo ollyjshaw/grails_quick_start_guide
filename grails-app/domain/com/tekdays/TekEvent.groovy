@@ -14,6 +14,7 @@ class TekEvent {
         "$name, $city"
     }
 
+static hasMany = [volunteers : TekUser, respondents : String]
     static constraints = {
         name()
         city()
